@@ -1,10 +1,22 @@
                   Airline Passenger Satisfaction Analysis
 
 Machine Learning Project — PCA + Logistic Regression
+## Project Overview
+
+Machine learning analysis of airline passenger satisfaction using PCA and Logistic Regression to identify key drivers of customer experience.
 
 This project explores the key factors influencing airline passenger satisfaction using machine learning techniques. The goal was not only to build a predictive model but also to understand which aspects of the travel experience matter most to passengers.
 
 The analysis combines data cleaning, feature engineering, dimensionality reduction (PCA), and classification modelling (Logistic Regression) to uncover patterns in passenger satisfaction.
+## Research Questions
+
+This project explores the following questions:
+
+1. How strongly do flight delays influence passenger satisfaction?
+2. Does service quality outweigh operational issues such as delays?
+3. How does travel class affect satisfaction levels?
+4. Do loyal customers respond differently to service experiences?
+5. Can hidden service dimensions be discovered using PCA?
 
 Project Motivation
 
