@@ -1,6 +1,7 @@
-                 ##  Airline Passenger Satisfaction Analysis
+## Airline Passenger Satisfaction Analysis
 
-Machine Learning Project — PCA + Logistic Regression
+# Machine Learning Project — PCA + Logistic Regression
+
 ## Project Overview
 
 Machine learning analysis of airline passenger satisfaction using PCA and Logistic Regression to identify key drivers of customer experience.
@@ -18,7 +19,7 @@ This project explores the following questions:
 4. Do loyal customers respond differently to service experiences?
 5. Can hidden service dimensions be discovered using PCA?
 
-Project Motivation
+## Project Motivation
 
 Airlines collect large amounts of feedback data from passengers, covering aspects such as:
 
@@ -38,7 +39,7 @@ The goal of this project was therefore to answer:
 
 What factors have the strongest impact on airline passenger satisfaction?
 
-Dataset
+## Dataset
 
 The dataset contains passenger experience ratings and flight information including:
 
@@ -52,20 +53,20 @@ flight delays
 
 satisfaction label
 
-The dataset includes 129,880 passenger records, making it large enough for meaningful statistical analysis and machine learning modelling.
+The dataset includes `129,880` passenger records, making it large enough for meaningful statistical analysis and machine learning modelling.
 
-Approach
+## Approach
 
 The project followed a structured machine learning workflow:
 
-#1. Data exploration
+## Data exploration
 
 Initial exploration revealed that Arrival Delay contained missing values.
 Instead of dropping these rows, a Linear Regression model was used to estimate missing arrival delays based on related features.
 
 This decision preserved valuable data and avoided unnecessary data loss.
 
-#2. Feature engineering
+## Feature engineering
 
 Several transformations were applied:
 
@@ -79,7 +80,7 @@ The service ratings contained 14 correlated variables, which could introduce mul
 
 To address this, Principal Component Analysis (PCA) was applied to compress these into key underlying service dimensions.
 
-#3. PCA Interpretation
+## PCA Interpretation
 
 The PCA results revealed two major latent factors:
 
@@ -107,7 +108,7 @@ boarding process
 
 This dimensionality reduction simplified the model while preserving important information.
 
-#4. Baseline model: Delay-only logistic regression
+## Baseline model: Delay-only logistic regression
 
 Initially, I built a logistic regression model using only:
 
@@ -122,7 +123,7 @@ However, the model showed that delays alone had very limited predictive power.
 This was an important moment in the analysis:
 my initial assumption that delays dominate satisfaction turned out to be incorrect.
 
-#5. Final logistic regression model
+## Final logistic regression model
 
 A richer model was then built using:
 
@@ -136,12 +137,12 @@ travel class
 
 The final model achieved:
 
-Accuracy: 0.81
-ROC-AUC: 0.88
+***Accuracy: 0.81***
+***ROC-AUC: 0.88***
 
 This indicates strong predictive capability.
 
-Key Findings
+## Key Findings
 
 Several insights emerged from the model.
 
@@ -151,7 +152,7 @@ Passengers traveling in Economy and Economy Plus classes show significantly diff
 
 Travel class had the largest coefficients in the model, indicating its strong influence.
 
-2️.b. Customer type matters
+## Customer type matters
 
 Loyal customers behave differently from disloyal customers.
 
@@ -159,7 +160,7 @@ Customer type emerged as one of the strongest predictors of satisfaction.
 
 This suggests that airlines benefit significantly from customer loyalty programs.
 
-3️.c. Service quality matters more than delays
+## Service quality matters more than delays
 
 One of the most surprising findings was that:
 
@@ -175,17 +176,17 @@ customer type
 
 This suggests that passengers are more forgiving of delays if the overall service experience is strong.
 
-4️.d. Hidden service dimensions explain satisfaction
+## Hidden service dimensions explain satisfaction
 
 PCA revealed that multiple service ratings actually represent broader underlying factors:
 
-overall onboard comfort
+**overall onboard comfort**
 
-pre-boarding convenience
+**pre-boarding convenience**
 
 These latent dimensions capture passenger experience more effectively than individual service metrics.
 
-Model Evaluation
+## Model Evaluation
 
 The final model was evaluated using:
 
@@ -199,7 +200,7 @@ Feature coefficient analysis
 
 The ROC curve achieved an AUC score of 0.88, indicating strong classification performance.
 
-Visualizations
+## Visualizations
 
 The analysis includes:
 
@@ -213,7 +214,7 @@ ROC curve evaluation
 
 These visualizations help explain why the model behaves the way it does, not just how accurate it is.
 
-Key Learning Moments
+## Key Learning Moments
 
 During the project several analytical decisions changed based on evidence:
 
@@ -227,7 +228,7 @@ Moving from a simple delay model to a richer behavioural model
 
 These adjustments were important in improving both model performance and interpretability.
 
-Technologies Used
+## Technologies Used
 
 Python
 Pandas
@@ -236,7 +237,7 @@ Scikit-Learn
 Matplotlib
 Jupyter Notebook
 
-Future Improvements:
+## Future Improvements:
 
 Possible extensions include:
 
